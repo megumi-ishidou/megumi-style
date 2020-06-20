@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ishi's Style</title>
+  <meta name="deskripstion" content="1から制作したポートフォリオです">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- jQuery  -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/b94bb0b432.js" crossorigin="anonymous"></script>
+  <!-- ファビコン  -->
+  <link rel="icon" type="image/png" href="image/logo.png">
+  <!--  Googole fonto -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Meie+Script&display=swap" rel="stylesheet">
+  <style>
+  @charset "UTF-8";
+
+/* * {
+  outline: 2px solid red;
+} */
+
+
+
+
+/*  共通部分 
+---------------------------*/
+html {
+  font-size: 100%;
+
+  
+}
+
+body {
+  font-family: "Yu Gothic Medium", "遊ゴシック Medium", YuGothic, "遊ゴシック体", "ヒラギノ角ゴ Pro w3", sans-serif;
+  line-height: 1.7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width:100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/*  ヘッダー
+-------------------------------  */
+/* LOGO */
+.top-logo {
+  width: 80px;
+  height: 80px;
+}
+
+/*  メインnav  
+-------------------------------------*/
+.main-nav {
+  display: flex;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  list-style: none;
+  margin-top: 25px;
+}
+
+.main-nav li {
+  margin-left: 36px;
+}
+
+.main-nav a {
+  color: #fd5f00;
+}
+
+.main-nav a:hover {
+  color: #0096b5;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 4%;
+  height: 80px;
+  opacity: .8;
+}
+
+
+/*  ハンバーガーメニュー ボタンのCSS 
+-----------------------------------*/
+#navToggle {
+  display: none;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 32px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 2;
+}
+#navToggle div {
+  position: relative;
+}
+#navToggle span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  border-bottom: solid 3px #0096b5;
+  -webkit-transition: .35s ease-in-out;
+  -moz-transition: .35s ease-in-out;
+  transition: .35s ease-in-out;
+}
+#navToggle span:nth-child(1) {
+  top: 0;
+}
+#navToggle span:nth-child(2) {
+  top: 12px;
+}
+#navToggle span:nth-child(3) {
+  top: 22px;
+}
+
+/*  ハンバーガーメニュー header や nav 内のCSS 
+-----------------------------------------------*/
+/*  header  */
+header {
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  background-color: #fff;
+}
+
+
+/*  メイン画像 
+--------------------------------*/
+.main-top {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../image/main-bg.jpg);
+  height: 100vh; 
+}
+
+
+
+
+/* メインタイトル文字
+---------------------------------*/
+.main-top h1 {
+  font-family: 'Meie Script', cursive;
+}
+
+.mask{
+  width: 450px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+/* サブタイトル
+-----------------------------------*/
+.sab-title {
+  font-size: 1.25rem;
+  color: #0096b5;
+  text-align: center;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+} 
+
+
+/*  タイトル文字 SVGアニメーション
+---------------------------------- */
+.cls-1 {
+  clip-path: url(#clip-all-bace);
+}
+
+.cls-10, .cls-11, .cls-12, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+}
+
+.cls-10, .cls-11, .cls-12, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-9 {
+  stroke-linejoin: round;
+}
+
+.cls-11, .cls-12, .cls-2, .cls-9 {
+  stroke-width: 20px;
+}
+
+
+
+.cls-3, .cls-4, .cls-6, .cls-7 {
+  stroke-width: 15px;
+}
+
+
+
+.cls-10, .cls-5, .cls-8 {
+  stroke-width: 10px;
+}
+
+
+
+.cls-13 {
+  fill: rgba(255,255,255,0);
+}
+
+
+
+/*  スクロールダウンアニメーション
+--------------------------------------*/
+.top-scroll {
+  position: relative;
+  height: 100%;
+  text-align: center;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.scroll {
+  padding-top: 50px;
+  color: #0096b5;
+  font-size: 20px;
+}
+
+.scroll span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  border: 2px solid #333;
+  border-radius: 100%;
+  box-sizing: border-box;
+  background: #fd5f00;
+  opacity: .8;
+  margin: 0 auto;
+}
+.scroll span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 3px solid #333;
+  border-bottom: 3px solid #333;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+.scroll span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 #0096b5;
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb 3s infinite;
+  animation: sdb 3s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: .2;
+  }
+  60% {
+    box-shadow: 0 0 0 60px #0096b5;
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: .2;
+  }
+  60% {
+    box-shadow: 0 0 0 60px #0096b5;
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+/*  ABOUT 自己紹介
+-----------------------------------  */
+.about-container {
+  background-color: #ffeee5;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #0096b5;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about-me {
+  display: flex;
+  justify-content: center;
+}
+
+.myphoto {
+  width: 250px;
+  height: 250px;
+  border-radius: 14px;
+}
+
+/* myphoto スクロールするとフェードインフェードアウト*/
+.fade_off {
+  opacity: 0;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -o-transition: all 2s;
+  -ms-transition: all 2s;
+  transition: all 2s;
+}
+
+.fade_on {
+  opacity: 1;
+}
+
+
+.about-me p {
+  font-size: 1.25rem;
+  color: #333;
+  text-align: center;
+} 
+
+.self h3 {
+  padding-left: 10%;
+  padding-top: 16px;
+}
+
+.self p {
+  text-align: left;
+  padding-left: 10%;
+  padding-top: 16px;
+  line-height: 1.4;
+}
+
+.skill {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 25%;
+  padding-bottom: 50px;    
+}
+
+.skill img {
+  width: 50px;
+  height: 50px;
+  bottom: 0;
+}
+
+  
+
+
+/*  SERVICE
+------------------------------------  */
+.service {
+  background-image: url(../image/service-bg.jpg);
+  background-size: cover;
+  background-position: center top;
+  opacity: .6;
+}
+
+/*  固定背景画像  スマホ用
+--------------------------------*/
+/* body::before {
+  background: url(../image/service-bg.jpg) no-repeat center;
+  background-size: cover;
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100vh;
+  opacity: .6;
+} */
+
+
+.service h2 {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  color: #0096b5;
+}
+
+.service p {
+  text-align: center;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.service-wrapper{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 80rem;
+ 
+}
+
+.cols{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 100px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.col{
+  width: calc(25% - 2rem);
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.container{
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+}
+
+
+#photo1 {
+  background-color: #fff;
+  background-image: url(../image/service-test1.png);
+}
+#photo2 {
+  background-color: #fff;
+  background-image: url(../image/service-test2.png);
+}
+#photo3 {
+  background-color: #fff;
+  background-image: url(../image/service-test3.png);
+}
+
+.front .fas {
+  color: #333;
+}
+
+
+
+.front,
+.back{
+  background-size: cover;
+    background-position: center;
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    text-align: center;
+    min-height: 300px;
+    height: auto;
+    border-radius: 10px;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.back{
+  background: #cedce7;
+  background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+  background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+  background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+}
+
+.front:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .6;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: 10px;
+}
+.container:hover .front,
+.container:hover .back{
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.inner{
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+            transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+            perspective: inherit;
+    z-index: 2;
+}
+
+.container .back{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container .front{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container:hover .back{
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.container:hover .front{
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.front .inner p{
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.back .inner p{
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  position: relative;
+  color: #fff;
+}
+
+
+.front .inner p:after{
+  content: '';
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #C6D4DF;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -.75rem;
+}
+
+.front .inner span{
+  color: #333;
+  font-family: 'Montserrat';
+  font-weight: 300;
+}
+
+@media screen and (max-width: 1024px){
+  .col{
+    width: calc(33.333333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 768px){
+  .col{
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 599px){
+  .col{
+    width: 70%;
+    margin: 0 0 2rem 0;
+  }
+}
+
+
+
+/*  WORKS  
+----------------------------------------- */
+.works {
+  background: #ffeee5;
+}
+
+.works h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #0096b5;
+  padding-top: 80px;
+}
+
+.grid-wrapper {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-bottom: 50px;
+  background: #ffeee5;
+}
+
+
+/* 画像アニメーション */
+.scrollanime {
+  opacity: 0;
+}
+.fadeInDown {
+  animation-name: fadeInDown;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.updown {
+  transform: translateY(-100px);
+}
+.downup {
+  transform: translateY(100px);
+}
+.grid-wrapper {
+  overflow: hidden;
+}
+.slide-right {
+  transform: translateX(200px);
+}
+.slide-left {
+  transform: translateX(-200px);
+}
+
+
+/*  画像ホバー */
+/* .awesome img:hover {
+  opacity: 0.4;
+} */
+
+
+/* Works画像タイトル font-awesome */
+.awesome p {
+  color: #333;
+  font-size: 20px;
+  text-align: center;
+  
+}
+
+.awesome p:hover {
+  color: #0096b5;
+  opacity: .6;
+}
+ 
+.awesome i {
+  padding-right: 10px;
+}
+
+.awesome img {
+  width: 100%;
+} 
+
+
+.word h3 {
+  text-align: center;
+  padding-bottom: 80px;
+  color: #0096b5;
+}
+
+
+
+/* CONTACT フォーム
+---------------------------------------- */
+.contact {
+  background-image: url(../image/contact-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: .6;
+}
+
+.contact-title h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #0096b5;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.contact-title p {
+  text-align: center;
+}
+
+.contact-title a {
+  text-align: center;
+  background: #0096b5;
+  color: #fff
+}
+
+.fa-twitter-square {
+  width: 16px;
+  height: 16px;
+}
+
+form div{
+  margin-bottom: 14px;
+  text-align: center;
+ 
+}
+
+label {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  display: block;
+  color: #0096b5;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  background: rgba(255, 255, 255, .8);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1rem;
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  max-width: 480px;
+}
+
+textarea {
+  width: 100%;
+  max-width: 480px;
+  height: 200px;
+}
+
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.button {
+  font-size: 1.25rem;
+  width: 100px;
+  height: 50px;
+  background: #0096b5;
+  color: #fff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+}
+.button:hover {
+  background: #fd5f00;
+}
+
+
+
+/* フッター
+---------------------------------- */
+ footer {
+  background: #fd5f00;
+  opacity: .8;
+  text-align: center;
+  height: 100px;
+  bottom: 0;
+} 
+
+footer p {
+  color: #fff;
+  font-size: .75rem;
+  padding-top: 8px;
+} 
+
+.footer-wrapper a {
+  font-size: 2rem;
+  color: #0096b5;
+}
+
+footer i {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  margin-top: 8px;
+  
+}
+
+.fa-twitter {
+  padding-top: 16px;
+  text-align: center;
+}
+
+ 
+
+/*  トップへ戻る  スクロール  */
+#goto_top {
+  position: fixed;
+  right: 1%;
+  bottom: 1%;
+  opacity: .6;
+}
+
+#goto_top a {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #0096b5;
+  display: block;
+  padding-top: 8px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+/*  レスポンシブ 
+=========================================*/
+
+/*  ハンバーガーメニュー、nav レスポンシブ 
+-----------------------------------------*/
+@media screen and (max-width: 599px) {
+
+  header nav {
+    position: absolute;
+    right: 0;
+    top: -300px;
+    background: #fff;
+    width: 100%;
+    height: 250px;
+    padding: 0 10px;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    text-align: left;
+    z-index: 1;
+  }
+  header ul {
+    margin: 32px;
+  }
+  header ul li {
+    display: block;
+    line-height: 3;
+  }
+  header ul li a {
+    display: block;
+  }
+  header ul li::after {
+    content: '';
+  }
+  header ul li:last-child {
+    border-bottom: none;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main-nav li {
+    margin-right: 32px;
+  }
+
+  #navToggle {
+    display: block;
+  }
+  .openNav #navToggle span:nth-child(1){
+    top: 11px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .openNav #navToggle span:nth-child(2),
+  .openNav #navToggle span:nth-child(3){
+    top: 11px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .openNav nav {
+    -moz-transform: translateY(351px);
+    -webkit-transform: translateY(351px);
+    transform: translateY(300px);
+  }
+}
+
+
+/*  タイトル、サブタイトル レスポンシブ
+-----------------------------------*/
+@media screen and (max-width: 1024px) { 
+  .mask {
+    width: 500px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } 
+
+   .sab-title {
+    font-size: 2rem;
+  } 
+}
+
+
+@media screen and (max-width: 768px) {
+  .mask {
+    width: 450px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } 
+
+   .sab-title {
+    font-size: 1.75rem;
+  } 
+}
+
+
+@media screen and (max-width: 599px) {
+  .mask {
+    width: 300px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .sab-title {
+    font-size: 1.125em;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+  .mask {
+    width: 270px;
+  }
+
+  .sab-title {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+/*  ABOUT 自己紹介 レスポンシブ 
+-----------------------------------  */
+
+@media screen and (max-width: 768px) {
+  .about-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #0096b5;
+    padding-top: 50px;
+  }
+
+  .myphoto {
+    width: 230px;
+    height: 230px;
+    padding-top: 16px;
+  }
+   
+}
+
+@media screen and (max-width: 599px) {
+  .about-container {
+    background-color: #ffeee5;
+  }
+
+  .about-title {
+    padding-top: 80px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #0096b5;
+    padding-top: 80px;    
+  }
+
+
+  .about-me {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .myself {
+    padding-right: 10%;   
+    text-align: center;
+  }
+
+  .skill {
+    padding: 50px 0;
+    margin-right: 10%; 
+  }  
+}
+
+
+
+/*  WORKS レスポンシブ   
+----------------------------------------- */
+
+@media screen and (max-width: 1024px) {
+
+}
+@media screen and (max-width: 768px) {
+  .item img {
+    max-width: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 544px) {
+  .grid-wrapper {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .item img {
+    max-width: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+/* CONTACT フォーム レスポンシブ 
+---------------------------------------- */
+@media screen and (max-width: 599px) {
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    max-width: 300px;
+  }
+  textarea {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+  }
+}
+  </style>
+  
+</head>
+<body>
+  <main class="top-container"> 
+  <!--  ヘッダー -->
+    <header class="page-header">
+      <div><a href="index.html"><img class="top-logo" src="image/logo.png" alt="Ishi'sStyleポートフォリオ"></a> </div>
+       <div id="navToggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div><!-- navToggle END-->
+      <nav>
+        <ul class="main-nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#contact">Contact</a></li> 
+         </ul> 
+      </nav> 
+    </header>
+
+
+
+    <!-- トップ画像  -->
+    <div class="main-top big-bg box">      
+    <!--  メインタイトル  アニメーション文字-->
+    <h1 class="svgall">
+      <!--  マスクサイズ  -->
+      <svg class="mask" viewBox="0 0 590 217" id="move">
+      <!-- マスク画像のベース -->
+      <image xlink:href="image/all-bace.svg" width="100%" height="100%" mask="url(#clipMask)">
+       </image>
+      <!-- マスク -->
+      <mask id="clipMask">
+      <!--マスクのpath-->
+      <path id="path_1" data-name="path 1" class="cls-2" d="M78.722,326.906s-.162,2.8,0,6.868,19.6,5.969,0,8.759-17.946,11.157-21.965,0-4.249-12.289,0-19.43,120.857-29.7,84.793-16.472-48.207,39.9-62.828,53.939S67.2,379.712,50.85,376.44,23.887,360.9,30.391,357.069" transform="translate(13 -229)"/>
+      <path id="path_2" data-name="path 2" class="cls-3" d="M126.782,352.659h7.7s1.879-.009,0-6.317-6.7-11.779-11.667-8.28-8,3.372-8.438,8.28S133.3,358.03,126.782,364.2s-4.211,12.942-12.407,10.9-16.615,3.667-14.133-4.793,5.515-11.769,5.515-11.769" transform="translate(13 -229)"/>
+      <path id="path_3" data-name="path 3" class="cls-4" d="M123.806,375.47l19.567-12s13.051-18.04,13.051-21.312S179.8,306.2,179.8,306.2l-43.072,75.092s19.34-36.63,31.159-39.134,12.068,3.008,11.912,6.74-15.468,17.334-11.912,20.649,7.773,6.952,16.142,0,26.839-27.389,26.839-27.389-29.315,23.417-15.738,27.389S227.1,352.553,227.1,352.553" transform="translate(13 -229)"/>
+      <path id="path_4" data-name="path 4" class="cls-5" d="M221.774,319l3.7,4.921s1.023,5.235,0,5.468-22.127,1.816-12.889-5.468" transform="translate(13 -229)"/>
+      <path id="path_5" data-name="path 5" class="cls-6" d="M249.07,306.2v4.893l-14.516,19.629" transform="translate(13 -229)"/>
+      <path id="path_6" data-name="path 6" class="cls-7" d="M266.8,356l6.606-6.98s6.964-1.533,0-6-2.1-9.735-12.454-6.236-12.973,9.206-11.06,12.236.258-4.2,5.953,6.98,12.892,11.411,5.107,14.677-7.984,9.409-15.44,4.482-11.191-8.2-7.692-11.272a17.791,17.791,0,0,1,7.692-3.832" transform="translate(13 -229)"/>
+      <path id="path_7" data-name="path 7" class="cls-8" d="M259.888,375.47l21.987-13.44,6.6-12.18" transform="translate(13 -229)"/>
+      <path id="path_8" data-name="path 8" class="cls-9" d="M381.712,329.692l8.161-6.647s11.231,5.981,4.5-5.353,6.653-19.729-12.662-14.37-23.1,3.922-24.064,26.369,6.05,36.1-8.724,40.922-30.948,13.312-34.12,0a26.506,26.506,0,0,1,4.149-22.12" transform="translate(13 -229)"/>
+      <path id="path_9" data-name="path 9" class="cls-10" d="M377.859,343.743H410.93" transform="translate(13 -229)"/>
+      <path id="path_10" data-name="path 10" class="cls-11" d="M403.83,324.346l-25.221,38.9s-20.3,4.855,0,5.754c12.345.547,20.573-3.737,25.366-7.361a22.524,22.524,0,0,0,4.107-3.908l15.934-18.17s-28.008,36.745-15.934,35.513,42.7-31.9,42.7-31.9-32.512,63.329-51.528,60.7-30.189-3.082-25.741-11.343,20.649-11.779,20.649-11.779" transform="translate(13 -229)"/>
+      <path id="path_11" data-name="path 11" class="cls-12" d="M438.429,375.47l23.735-16.448,33.063-54.163s-39.268,72.853-33.063,70.61c4.5-1.628,26.472-.575,33.063-3.953,2.129-1.091-6.112-9.1-6.112-9.1s27.349.921,27.545-12.342-6.376-19.713-14.189-12.513-13.356,12.513-13.356,12.513,7.941,31.526,20.379,21.442,24.382-21.442,24.382-21.442" transform="translate(13 -229)"/>
+      </mask>
+    </svg>
+    </h1>
+    <!--スクロールするとフェードインフェードアウト サブタイトル-->
+    <div id="sab" class="fade_off">
+    <p class="sab-title">〜出会いをカタチに〜</p>
+    </div>
+
+    <!-- スクロールダウンアニメーション -->
+    <div class="top-scroll">
+    <a class="scroll" href="#"><span></span>Scroll</a>
+    </div>
+    </div>
+  
+
+
+ 
+  
+
+  <!--  About  Me -->
+
+  <section class="about-container" id="about">
+    <h2 class="about-title">ABOUT ME</h2>
+
+
+    <div class="about-me">
+    <!--スクロールするとフェードインフェードアウト myphoto -->
+    <div id="imagephoto" class="fade_off">
+    <img class="myphoto" src="image/about.jpg" alt="プロフィール写真">
+    <p>ishi</p>
+    </div>
+      
+    <div class="self">
+    <h3 class="myself">自己紹介</h3>
+     <p class="myword">初めまして、Ishiと申します。<br>ものづくりが好きという気付きの元Web制作と出会い、<br>Webを通して笑顔をお届けすべく現在活動しております。<br>趣味は写真撮影です。<br>縁を大切にお仕事をさせていただきます。</p>
+    </div>
+    </div>
+
+
+    <div class="skill">
+    <h4 class="skill-logo">Skill</h4>
+    <img class="logo1" src="image/Logo-HTML.svg">
+    <img class="logo2" src="image/Logo-CSS.svg">
+    <img class="logo3" src="image/Logo-JavaScript.svg">
+    <img class="logo4" src="image/Logo-jQuery.svg">
+    <img class="logo5" src="image/Logo-Bootstrap.svg">
+    </div>
+  </section> <!--about-container  END -->
+
+  
+  
+  <!--  SERVICE  -->
+  <section class="service" id="service">
+    <h2>SERVICE</h2>
+    <p>※タップすると詳細が表示されます</p>
+    <div class="service-wrapper">
+      <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" id="photo1">
+                    <div class="inner">
+                        <p>ランディングページ制作</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>お客様のご要望をしっかり確認した上でランディングページを制作します。アニメーション対応やレスポンシブ対応もお任せください。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" id="photo2">
+                    <div class="inner">
+                        <p>コーディング</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>お預かりしたデザインデータを元に、適切にコーディングいたします。レスポンシブも対応致します。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+                <div class="front" id="photo3">
+                    <div class="inner">
+                        <p>スマホ対応</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>Webサイトをスマートフォンでも見やすく公開できるようにレスポンシブ対応へカスタマイズ致します。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div><!-- cols END -->
+      </div><!-- service-wrapper END -->
+  </section><!-- service END -->
+
+
+
+  <!--  WORKS  -->
+  <section class="works" id="works">
+      <h2>WORKS</h2>
+      <!-- works画像グリッドレイアウト -->
+      <div class="grid-wrapper">
+        <div class="scrollanime slide-right awesome">
+          <a href="https://reverent-bartik-cd5d2e.netlify.app"><img src="image/works-test2.png" alt=""><p><i class="fab fa-bootstrap"></i>BOOTSTRAP(模写)</p></a>
+
+        </div> 
+          <div class="scrollanime slide-left awesome"> 
+            <a href=""><img src="image/works-bg.png" alt=""><p><i class="fab fa-airbnb"></i>Airbnb(摸写)</p></a>
+          </div>            
+          
+          
+          <div class="scrollanime slide-left awesome">
+            <a href=""><img src="image/works-bg.png" alt=""><p><i class="fas fa-laptop-code"></i>LP(模写)</p></a>
+          </div>
+          <div class="scrollanime slide-right awesome">
+            <a href=""><img src="image/works-bg.png" alt=""><p><i class="fas fa-desktop"></i>架空サイト(模写)</p></a>
+          </div>
+          <div class="scrollanime slide-left awesome">
+            <a href=""><img src="image/works-bg.png" alt=""><p><i class="fas fa-desktop"></i></p></a>
+          </div>
+          <div class="scrollanime slide-right awesome">
+            <a href=""><img src="image/works-bg.png" alt=""><p><i class="fas fa-desktop"></i></p></a>
+          </div> 
+      </div><!-- grid-wrapper END -->
+      <div class="word">
+        <h3>~お気軽にご相談ください~</h3>
+      </div> 
+  </section><!-- works END-->
+
+
+
+  <!--  CONTACT  -->
+  <section class="contact" id="contact">
+    <div class="contact-title">
+      <h2>CONTACT</h2>
+      <p>※只今、準備中です</p>
+      <p>お問い合わせはTwitterのDMまでお願い致します</p>
+      <p><a href="https://twitter.com/ishi_chan5"><i class="fab fa-twitter-square"></i>@ishi_chan5</a></p>
+    </div>
+
+    <form action="#">
+      <div>
+        <label for="name">お名前</label>
+        <input type="text" id="name" name="your-name" placeholder="例)山田太郎">
+      </div>
+      <div>
+        <label for="kana">フリガナ</label> 
+        <input type="text" id="kana" name="your-kana" placeholder="例)ヤマダタロウ">
+      </div>
+      <div>
+        <label for="email">メールアドレス</label>
+        <input type="email" id="email" name="your-email" placeholder="例)example@gmail.com">
+      </div>
+      <div>
+        <label for="message">お問い合わせ</label>
+        <textarea id="message" name="your-message" placeholder="お問い合わせ内容をご記入ください"></textarea>
+      </div>
+      <div>
+      <input type="submit" class="button" value="送信">
+      </div>
+    </form>
+  </section>
+</main>
+
+
+<!-- フッター-->
+<footer>
+  <div class="footer-wrapper">
+    <a href="https://twitter.com/ishi_chan5"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+   <p><small>&copy; 2020 Ishi's Style, All Right Reserved</small></p>
+  </div>
+</footer>
+
+
+<!--  トップへ戻る  スクロール-->
+<div id="goto_top">
+  <a href="#">Page Top</a>
+</div>
+
+
+
+
+<!--  vivus.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+  <script>
+  new Vivus('move', {
+  type: 'oneByOne',
+  start: 'inViewport',
+  duration: 150,
+  forceRender: false, 
+  animTimingFunction:Vivus.LINEAR})
+  </script> 
+  <!-- アニメーションスピード  -->
+  <!-- new Vivus('move', {
+  type: 'oneByOne',duration: 800,forceRender: false, animTimingFunction:Vivus.EASE_OUT})</script> -->
+
+
+<script src="js/main.js"></script>
+<script>
+// ハンバーガーメニュー
+$(function(){
+  $('#navToggle').click(function(){
+    $('header').toggleClass('openNav');
+  });
+});
+
+
+
+//サブタイトル スクロールするとフェードインフェードアウト
+$(function(){
+  $(window).scroll(function (){
+    $("#sab").each(function(){
+      var imgPos = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > imgPos - windowHeight + 100){
+      // if (scroll > imgPos - windowHeight + windowHeight/5){
+        $(this).addClass("fade_on");
+      } else {
+        $(this).removeClass("fade_on");
+      }
+    });
+  });
+});
+
+
+//myphoto スクロールするとフェードインフェードアウト
+$(function(){
+  $(window).scroll(function (){
+    $("#imagephoto").each(function(){
+      var imgPos = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > imgPos - windowHeight + 100){
+      // if (scroll > imgPos - windowHeight + windowHeight/5){
+        $(this).addClass("fade_on");
+      } else {
+        $(this).removeClass("fade_on");
+      }
+    });
+  });
+});
+
+
+
+// WORKS 画像アニメーション
+$(function(){
+  $(window).scroll(function(){
+    const wHeight = $(window).height();
+    const scrollAmount = $(window).scrollTop();
+    $('.scrollanime').each(function(){
+      const targetPosition = $(this).offset().top;
+      if(scrollAmount > targetPosition - wHeight + 100) {
+        $(this).addClass("fadeInDown");
+
+      }
+    });
+  });
+});
+
+
+
+$(function(){
+  var width =  $(window).width();
+  $('a[href*="#"]').click(function() {
+  var speed = 800; 
+  var href= $(this).attr("href");
+  var target = $(href == "#" || href == "" ? 'html' : href);
+  var position = target.offset().top;
+  $('body,html').animate({scrollTop:position}, speed, 'swing');
+  return false;
+  });
+  });
+
+</script>
+
+
+</body>
+</html>
