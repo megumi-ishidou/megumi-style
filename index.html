@@ -18,7 +18,7 @@
   <!--  Googole fonto -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Meie+Script&display=swap" rel="stylesheet">
   <style>
-  @charset "UTF-8";
+    @charset "UTF-8";
 
 /* * {
   outline: 2px solid red;
@@ -95,6 +95,7 @@ img {
   padding: 0 4%;
   height: 80px;
   opacity: .8;
+  
 }
 
 
@@ -158,10 +159,6 @@ header {
 
 /* メインタイトル文字
 ---------------------------------*/
-.main-top h1 {
-  font-family: 'Meie Script', cursive;
-}
-
 .mask{
   width: 450px;
   position: absolute;
@@ -173,14 +170,31 @@ header {
 /* サブタイトル
 -----------------------------------*/
 .sab-title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #0096b5;
   text-align: center;
   position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);  
-} 
+}
+
+/*サブタイト文字アニメーション */
+.animation {
+  animation-name: fadein;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
 
 
 /*  タイトル文字 SVGアニメーション
@@ -834,6 +848,10 @@ input[type="submit"] {
   background: #fd5f00;
 }
 
+.submit {
+  margin-bottom: 0;
+}
+
 
 
 /* フッター
@@ -1126,8 +1144,7 @@ footer i {
     max-width: 300px;
     height: 200px;
   }
-}
-  </style>
+}  </style>
   
 </head>
 <body>
@@ -1181,8 +1198,9 @@ footer i {
     </svg>
     </h1>
     <!--スクロールするとフェードインフェードアウト サブタイトル-->
-    <div id="sab" class="fade_off">
-    <p class="sab-title">〜出会いをカタチに〜</p>
+    <!-- <div id="sab" class="fade_off"> -->
+    <div class="sab">
+    <p class="sab-title animation">〜出会いをカタチに〜</p>
     </div>
 
     <!-- スクロールダウンアニメーション -->
@@ -1193,11 +1211,7 @@ footer i {
   
 
 
- 
-  
-
   <!--  About  Me -->
-
   <section class="about-container" id="about">
     <h2 class="about-title">ABOUT ME</h2>
 
@@ -1288,9 +1302,10 @@ footer i {
       <!-- works画像グリッドレイアウト -->
       <div class="grid-wrapper">
         <div class="scrollanime slide-right awesome">
-          <a href="https://reverent-bartik-cd5d2e.netlify.app"><img src="image/works-test2.png" alt=""><p><i class="fab fa-bootstrap"></i>BOOTSTRAP(模写)</p></a>
-
+          <a href=""><img src="image/works-bg.png" alt=""><p><i class="fab fa-bootstrap"></i>BOOTSTRAP(模写)</p></a>
         </div> 
+          <!-- <a href="https://reverent-bartik-cd5d2e.netlify.app"><img src="image/works-test2.png" alt=""><p><i class="fab fa-bootstrap"></i>BOOTSTRAP(模写)</p></a>
+        </div>  -->
           <div class="scrollanime slide-left awesome"> 
             <a href=""><img src="image/works-bg.png" alt=""><p><i class="fab fa-airbnb"></i>Airbnb(摸写)</p></a>
           </div>            
@@ -1342,7 +1357,7 @@ footer i {
         <label for="message">お問い合わせ</label>
         <textarea id="message" name="your-message" placeholder="お問い合わせ内容をご記入ください"></textarea>
       </div>
-      <div>
+      <div class="submit">
       <input type="submit" class="button" value="送信">
       </div>
     </form>
@@ -1384,7 +1399,7 @@ footer i {
 
 <script src="js/main.js"></script>
 <script>
-// ハンバーガーメニュー
+  // ハンバーガーメニュー
 $(function(){
   $('#navToggle').click(function(){
     $('header').toggleClass('openNav');
@@ -1393,22 +1408,22 @@ $(function(){
 
 
 
-//サブタイトル スクロールするとフェードインフェードアウト
-$(function(){
-  $(window).scroll(function (){
-    $("#sab").each(function(){
-      var imgPos = $(this).offset().top;
-      var scroll = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      if (scroll > imgPos - windowHeight + 100){
-      // if (scroll > imgPos - windowHeight + windowHeight/5){
-        $(this).addClass("fade_on");
-      } else {
-        $(this).removeClass("fade_on");
-      }
-    });
-  });
-});
+// //サブタイトル スクロールするとフェードインフェードアウト
+// $(function(){
+//   $(window).scroll(function (){
+//     $("#sab").each(function(){
+//       var imgPos = $(this).offset().top;
+//       var scroll = $(window).scrollTop();
+//       var windowHeight = $(window).height();
+//       if (scroll > imgPos - windowHeight + 100){
+//       // if (scroll > imgPos - windowHeight + windowHeight/5){
+//         $(this).addClass("fade_on");
+//       } else {
+//         $(this).removeClass("fade_on");
+//       }
+//     });
+//   });
+// });
 
 
 //myphoto スクロールするとフェードインフェードアウト
@@ -1430,6 +1445,9 @@ $(function(){
 
 
 
+
+
+
 // WORKS 画像アニメーション
 $(function(){
   $(window).scroll(function(){
@@ -1447,6 +1465,8 @@ $(function(){
 
 
 
+
+//スムーススクロール
 $(function(){
   var width =  $(window).width();
   $('a[href*="#"]').click(function() {
@@ -1458,8 +1478,7 @@ $(function(){
   return false;
   });
   });
-
-</script>
+  </script>
 
 
 </body>
