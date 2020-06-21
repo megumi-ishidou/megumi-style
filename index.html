@@ -53,6 +53,55 @@ img {
   height: auto;
 }
 
+
+
+
+
+/* ローディング画面 */
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color: #0bd;
+}
+.spinner {
+  width: 100px;
+  height: 100px;
+  margin: 250px auto;
+  background-color: #fff;
+  border-radius: 100%;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+/* ローディングアニメーション */
+@keyframes sk-scaleout {
+  0% {
+    transform: scale(0);
+  } 100% {
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color: #0bd;
+ 
+/* 以下のコードを追加 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+
+
+
 /*  ヘッダー
 -------------------------------  */
 /* LOGO */
@@ -1144,12 +1193,23 @@ footer i {
     max-width: 300px;
     height: 200px;
   }
-}  </style>
+}
+  </style>
   
 </head>
 <body>
+
+ 
+
+
+  
+<!-- ローディング画面 -->
+<div id="loading">
+  <div class="spinner"></div>
+</div>
+
   <main class="top-container"> 
-  <!--  ヘッダー -->
+    <!--  ヘッダー -->
     <header class="page-header">
       <div><a href="index.html"><img class="top-logo" src="image/logo.png" alt="Ishi'sStyleポートフォリオ"></a> </div>
        <div id="navToggle">
@@ -1382,6 +1442,7 @@ footer i {
 
 
 
+
 <!--  vivus.js -->
   <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
   <script>
@@ -1478,6 +1539,16 @@ $(function(){
   return false;
   });
   });
+
+
+
+
+  window.onload = function() {
+    const spinner = document.getElementById('loading');
+    spinner.classList.add('loaded');
+  }
+
+
   </script>
 
 
