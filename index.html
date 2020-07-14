@@ -17,6 +17,7 @@
   <link rel="icon" type="image/png" href="image/logo.png">
   <!--  Googole fonto -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Meie+Script&display=swap" rel="stylesheet">
+  
   <style>
     @charset "UTF-8";
 
@@ -52,13 +53,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-
-
-
-
-
-
 
 /*  ヘッダー
 -------------------------------  */
@@ -157,7 +151,7 @@ header {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(image/main-bg.jpg);
+  background-image: url(../image/main-bg.jpg);
   height: 100vh; 
 }
 
@@ -422,7 +416,7 @@ header {
 /*  SERVICE
 ------------------------------------  */
 .service {
-  background-image: url(image/service-bg.jpg);
+  background-image: url(../image/service-bg.jpg);
   background-size: cover;
   background-position: center top;
   opacity: .6;
@@ -500,15 +494,15 @@ header {
 
 #photo1 {
   background-color: #fff;
-  background-image: url(image/service-test1.png);
+  background-image: url(../image/service-test1.png);
 }
 #photo2 {
   background-color: #fff;
-  background-image: url(image/service-test2.png);
+  background-image: url(../image/service-test2.png);
 }
 #photo3 {
   background-color: #fff;
-  background-image: url(image/service-test3.png);
+  background-image: url(../image/service-test3.png);
 }
 
 .front .fas {
@@ -672,6 +666,14 @@ header {
 
 
 
+
+
+
+
+
+
+
+
 /*  WORKS  
 ----------------------------------------- */
 .works {
@@ -731,7 +733,8 @@ header {
 
 /*  画像ホバー */
 /* .awesome img:hover {
-  opacity: 0.4;
+  background: #f78d3f;
+  opacity: 0.6;
 } */
 
 
@@ -765,10 +768,31 @@ header {
 
 
 
+/*  worksのリンクページ  */
+.works-bc {
+  background: #f78d3f;
+  opacity: .8;
+}
+
+.works-link {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.fa-times {
+  color: #fff;
+  
+}
+
+
+
+
+
 /* CONTACT フォーム
 ---------------------------------------- */
 .contact {
-  background-image: url(image/contact-bg.jpg);
+  background-image: url(../image/contact-bg.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1156,14 +1180,8 @@ footer i {
   
 </head>
 <body>
-
- 
-
-
-  
-
   <main class="top-container"> 
-    <!--  ヘッダー -->
+  <!--  ヘッダー -->
     <header class="page-header">
       <div><a href="index.html"><img class="top-logo" src="image/logo.png" alt="Ishi'sStyleポートフォリオ"></a> </div>
        <div id="navToggle">
@@ -1239,7 +1257,7 @@ footer i {
       
     <div class="self">
     <h3 class="myself">自己紹介</h3>
-     <p class="myword">初めまして、Ishiと申します。<br>ものづくりが好きという気付きの元Web制作と出会い、<br>Webを通して笑顔をお届けすべく現在活動しております。<br>趣味は写真撮影です。<br>縁を大切にお仕事をさせていただきます。</p>
+     <p class="myword">初めまして、Ishiと申します。<br>ものづくりが好きという気付きの元<br>Web制作と出会い、<br>Webを通して笑顔をお届けすべく<br>現在活動しております。<br>趣味は写真撮影です。<br>縁を大切にお仕事をさせていただきます。</p>
     </div>
     </div>
 
@@ -1315,27 +1333,33 @@ footer i {
       <h2>WORKS</h2>
       <!-- works画像グリッドレイアウト -->
       <div class="grid-wrapper">
-        <div class="scrollanime slide-right awesome">
-          <a href=""><img src="image/works-bg.png" alt=""><p><i class="fab fa-bootstrap"></i></p></a>
+        <div class="scrollanime slide-left awesome">
+          <a href="Works-BOOTSTRAP.html"><img src="image/works-test2.png" alt=""><p><i class="fab fa-bootstrap"></i>BOOTSTRAP(模写)</p></a>
         </div> 
           <!-- <a href="https://reverent-bartik-cd5d2e.netlify.app"><img src="image/works-test2.png" alt=""><p><i class="fab fa-bootstrap"></i>BOOTSTRAP(模写)</p></a>
         </div>  -->
-          <div class="scrollanime slide-left awesome"> 
-            <a href=""><img src="image/works-bg.png" alt=""><p><i class="fab fa-airbnb"></i></p></a>
+          <div class="scrollanime slide-right awesome"> 
+            <a href="Works-FLOWER.html"><img src="image/wk-flower.png" alt=""><p><i class="fas fa-desktop"></i>FLOWER(摸写)</p></a>
           </div>            
           
           
           <div class="scrollanime slide-left awesome">
-            <a href=""><img src="image/works-bg.png" alt=""><p><i class="fas fa-laptop-code"></i></p></a>
+            <a href=""><img src="image/wk-bg.png" alt=""><p><i class="fas fa-desktop"></i></p></a>
           </div>
+
+          <!-- <div class="scrollanime slide-left awesome">
+            <a href=""><img src="image/works-bg.png" alt=""><p><i class="fab fa-airbnb"></i></p></a>
+          </div> -->
+
+
           <div class="scrollanime slide-right awesome">
-            <a href=""><img src="image/works-bg.png" alt=""><p><i class="fas fa-desktop"></i></p></a>
+            <a href=""><img src="image/wk-bg.png" alt=""><p><i class="fas fa-desktop"></i></p></a>
           </div>
           <div class="scrollanime slide-left awesome">
-            <a href=""><img src="image/works-bg.png" alt=""><p><i class="fas fa-desktop"></i></p></a>
+            <a href=""><img src="image/wk-bg.png" alt=""><p><i class="fas fa-desktop"></i></p></a>
           </div>
           <div class="scrollanime slide-right awesome">
-            <a href=""><img src="image/works-bg.png" alt=""><p><i class="fas fa-desktop"></i></p></a>
+            <a href=""><img src="image/wk-bg.png" alt=""><p><i class="fas fa-desktop"></i></p></a>
           </div> 
       </div><!-- grid-wrapper END -->
       <div class="word">
@@ -1396,7 +1420,6 @@ footer i {
 
 
 
-
 <!--  vivus.js -->
   <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
   <script>
@@ -1413,67 +1436,7 @@ footer i {
 
 
 <script src="js/main.js"></script>
-<script>
-// ハンバーガーメニュー
-$(function(){
-  $('#navToggle').click(function(){
-    $('header').toggleClass('openNav');
-  });
-});
 
-
-
-//myphoto スクロールするとフェードインフェードアウト
-$(function(){
-  $(window).scroll(function (){
-    $("#imagephoto").each(function(){
-      var imgPos = $(this).offset().top;
-      var scroll = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      if (scroll > imgPos - windowHeight + 100){
-      // if (scroll > imgPos - windowHeight + windowHeight/5){
-        $(this).addClass("fade_on");
-      } else {
-        $(this).removeClass("fade_on");
-      }
-    });
-  });
-});
-
-
-
-// WORKS 画像アニメーション
-$(function(){
-  $(window).scroll(function(){
-    const wHeight = $(window).height();
-    const scrollAmount = $(window).scrollTop();
-    $('.scrollanime').each(function(){
-      const targetPosition = $(this).offset().top;
-      if(scrollAmount > targetPosition - wHeight + 100) {
-        $(this).addClass("fadeInDown");
-
-      }
-    });
-  });
-});
-
-
-
-
-//スムーススクロール
-$(function(){
-  var width =  $(window).width();
-  $('a[href*="#"]').click(function() {
-  var speed = 800; 
-  var href= $(this).attr("href");
-  var target = $(href == "#" || href == "" ? 'html' : href);
-  var position = target.offset().top;
-  $('body,html').animate({scrollTop:position}, speed, 'swing');
-  return false;
-  });
-  });
-
-  </script>
 
 
 </body>
